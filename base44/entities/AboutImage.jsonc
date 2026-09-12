@@ -1,0 +1,19 @@
+{
+  "name": "AboutImage",
+  "type": "object",
+  "properties": {
+    "image_url": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "image_url"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "starter_fingerlings",
+        "standard_growout",
+        "advance_stocker",
+        "jumbo_stocker"
+      ],
+      "default": "starter_fingerlings"
+    },
+    "size_label": {
+      "type": "string"
+    },
+    "base_price": {
+      "type": "number",
+      "default": 0
+    },
+    "stock_count": {
+      "type": "number",
+      "default": 0
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tier_pricing": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "min_quantity": {
+            "type": "number"
+          },
+          "price_per_unit": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "low_stock_threshold": {
+      "type": "number",
+      "default": 50
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "base_price"
+  ]
+}

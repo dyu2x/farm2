@@ -1,0 +1,87 @@
+{
+  "name": "SiteSettings",
+  "type": "object",
+  "properties": {
+    "farm_name": {
+      "type": "string",
+      "default": "Mesina Farms"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "operating_hours": {
+      "type": "object",
+      "properties": {
+        "mon_fri": {
+          "type": "string"
+        },
+        "sat": {
+          "type": "string"
+        },
+        "sun": {
+          "type": "string"
+        }
+      }
+    },
+    "holidays": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string"
+          },
+          "recurring": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      }
+    },
+    "about_content": {
+      "type": "string"
+    },
+    "why_choose_us": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "hero_title": {
+      "type": "string"
+    },
+    "hero_subtitle": {
+      "type": "string"
+    }
+  }
+}

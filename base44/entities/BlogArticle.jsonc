@@ -1,0 +1,51 @@
+{
+  "name": "BlogArticle",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "video_url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "archived"
+      ],
+      "default": "active"
+    },
+    "published_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "author": {
+      "type": "string",
+      "default": "Mesina Farms"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}
